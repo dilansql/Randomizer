@@ -1,19 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using System.IO;
-using System.Text.RegularExpressions;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Configuration.Json;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Options;
 
 namespace Randomize
 {
@@ -25,6 +16,24 @@ namespace Randomize
         public MainWindow()
         {
             InitializeComponent();
+
+            var configuration = 
+                new ConfigurationBuilder()
+                    .AddJsonFile("appsettings.json")
+                    .AddJsonFile("appsettings2.json")
+                    .Build();
+
+
+            var serviceProvider =
+                new ServiceCollection()
+                .AddServices()
+                .AddRandomiserOptions(configuration)
+                .BuildServiceProvider();
+           
+            //var value = serviceProvider.GetRequiredService<IOptions<RandomizeOptions>>();
+            //var newValue = value.Value;
+
+            var randomzer = serviceProvider.GetRequiredService<IRandomzer>();
         }
         #region Randomizer Method
         public static string GenerateDeviceId()
