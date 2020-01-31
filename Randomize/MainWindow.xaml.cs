@@ -23,18 +23,15 @@ namespace Randomize
                     .AddJsonFile("appsettings2.json")
                     .Build();
 
-
             var serviceProvider =
                 new ServiceCollection()
                 .AddServices()
                 .AddRandomiserOptions(configuration)
                 .BuildServiceProvider();
-           
-            //var value = serviceProvider.GetRequiredService<IOptions<RandomizeOptions>>();
-            //var newValue = value.Value;
 
             var randomzer = serviceProvider.GetRequiredService<IRandomzer>();
         }
+
         #region Randomizer Method
         public static string GenerateDeviceId()
         {
