@@ -6,7 +6,7 @@ namespace Randomize.Randomize
 {
     class DeviceIDRandomizer : IRandomizer
     {
-        public void GetRandomEntity()
+        public string GetRandomEntity()
             => GenerateDeviceId();
 
         public static string GenerateDeviceId()

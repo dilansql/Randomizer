@@ -1,12 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Dilan.Randomizers
 {
-    class Email_Randomizer : IRandomizer
+    class EmailRandomizer : IRandomizer
     {
-        public void GetRandomEntity()
-            => Console.WriteLine($"{Guid.NewGuid()}@{Guid.NewGuid()}.com");
+        public string GetRandomEntity()
+            => ($"{Guid.NewGuid()}@{Guid.NewGuid()}.com");
     }
 }

@@ -10,6 +10,10 @@ namespace Randomize
     public partial class MainWindow : Window
     {
         private IRandomizer _deviceIdRandomizer = new DeviceIDRandomizer();
+        private IRandomizer _diceRandomiser = new DiceRandomizer();
+        private IRandomizer _emailRandomizer = new EmailRandomizer();
+        private IRandomizer _integerRandomizer = new IntegerRandomizer();
+        private IRandomizer _stringRandomizer = new StringRandomizer();
 
         public MainWindow()
         {

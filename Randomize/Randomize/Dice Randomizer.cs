@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Dilan.Randomizers
 {
@@ -9,8 +7,7 @@ namespace Dilan.Randomizers
         public string GetRandomEntity()
         {
             Random randint = new Random();
-            var finalNum = randint.Next(1, 7);
-            Console.WriteLine(finalNum);
+            return randint.Next(1, 7).ToString();
         }
     }
 }

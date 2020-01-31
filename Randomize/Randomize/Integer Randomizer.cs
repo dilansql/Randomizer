@@ -1,16 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Dilan.Randomizers
 {
-    class Integer_Randomizer : IRandomizer
+    class IntegerRandomizer : IRandomizer
     {
-        public void GetRandomEntity()
+        public string GetRandomEntity()
         {
             Random randint = new Random();
-            Console.WriteLine(randint.Next(1, 50));
+            return randint.Next(1, 50).ToString();
         }
     }
 }
