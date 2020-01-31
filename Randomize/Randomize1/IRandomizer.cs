@@ -1,4 +1,4 @@
-﻿namespace Dilan.Randomizers
+﻿namespace Randomizers
 {
     public interface IRandomizer
     {

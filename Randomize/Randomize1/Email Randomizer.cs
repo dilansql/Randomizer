@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Dilan.Randomizers
+namespace Randomizers
 {
     class EmailRandomizer : IRandomizer
     {

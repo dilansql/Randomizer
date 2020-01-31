@@ -1,13 +1,13 @@
 ﻿using System;
 
-namespace Dilan.Randomizers
+namespace Randomizers
 {
-    class DiceRandomizer : IRandomizer
+    class IntegerRandomizer : IRandomizer
     {
         public string GetRandomEntity()
         {
             Random randint = new Random();
-            return randint.Next(1, 7).ToString();
+            return randint.Next(1, 50).ToString();
         }
     }
 }

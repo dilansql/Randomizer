@@ -135,8 +135,8 @@
     <Compile Include="Configuration\Randomzer.cs" />
     <Compile Include="Configuration\MyNewOptions.cs" />
     <Compile Include="Configuration\ServiceExtensions.cs" />
-    <Compile Include="Randomize\DeviceID Randomizer.cs" />
-    <Compile Include="Randomize\String Randomizer.cs" />
+    <Compile Include="Randomize1\DeviceID Randomizer.cs" />
+    <Compile Include="Randomize1\String Randomizer.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -145,10 +145,10 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Randomize\Dice Randomizer.cs" />
-    <Compile Include="Randomize\Email Randomizer.cs" />
-    <Compile Include="Randomize\Integer Randomizer.cs" />
-    <Compile Include="Randomize\IRandomizer.cs" />
+    <Compile Include="Randomize1\Dice Randomizer.cs" />
+    <Compile Include="Randomize1\Email Randomizer.cs" />
+    <Compile Include="Randomize1\Integer Randomizer.cs" />
+    <Compile Include="Randomize1\IRandomizer.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>

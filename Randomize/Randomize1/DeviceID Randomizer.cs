@@ -1,8 +1,8 @@
-﻿using Dilan.Randomizers;
+﻿using Randomizers;
 using System;
 using System.Text;
 
-namespace Randomize.Randomize
+namespace Randomize
 {
     class DeviceIDRandomizer : IRandomizer
     {

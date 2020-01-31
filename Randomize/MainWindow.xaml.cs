@@ -1,6 +1,6 @@
 ﻿using System.Windows;
-using Dilan.Randomizers;
-using Randomize.Randomize;
+using Randomizers;
+
 
 namespace Randomize
 {
@@ -21,17 +21,43 @@ namespace Randomize
         }
 
         #region Randomizer Method
-        
+
         #endregion Randomizer Method
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Txt.Text = " ";
+            DeviceIDTxt.Text = string.Empty;
             string DeviceID = _deviceIdRandomizer.GetRandomEntity();
-            Txt.Text += DeviceID;
+            DeviceIDTxt.Text += DeviceID;
         }
         private void Clear1(object sender, RoutedEventArgs e)
         {
-            Txt.Text = " ";
+            DeviceIDTxt.Text = DeviceIDTxt.Text = string.Empty; ;
+        }
+
+        private void RandomizeString(object sender, RoutedEventArgs e)
+        {
+            StringTxt.Text = string.Empty;
+            StringTxt.Text += _stringRandomizer.GetRandomEntity(); 
+        }
+
+        private void StringClear(object sender, RoutedEventArgs e)
+        {
+            StringTxt.Text = string.Empty;
+        }
+
+        private void RandomizeNumber(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void RandomizeDice(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void RandomizeEmail(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-namespace Dilan.Randomizers
+namespace Randomizers
 {
     class StringRandomizer : IRandomizer
     {
