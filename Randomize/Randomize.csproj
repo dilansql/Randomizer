@@ -129,11 +129,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="IRandomzer.cs" />
-    <Compile Include="MyNewOptions.cs" />
-    <Compile Include="RandomizeOptions.cs" />
-    <Compile Include="Randomzer.cs" />
-    <Compile Include="ServiceExtensions.cs" />
+    <Compile Include="Configuration\Configuration.cs" />
+    <Compile Include="Configuration\IRandomzer.cs" />
+    <Compile Include="Configuration\RandomizeOptions.cs" />
+    <Compile Include="Configuration\Randomzer.cs" />
+    <Compile Include="Configuration\MyNewOptions.cs" />
+    <Compile Include="Configuration\ServiceExtensions.cs" />
+    <Compile Include="Randomize\DeviceID Randomizer.cs" />
+    <Compile Include="Randomize\String Randomizer.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -142,6 +145,10 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Randomize\Dice Randomizer.cs" />
+    <Compile Include="Randomize\Email Randomizer.cs" />
+    <Compile Include="Randomize\Integer Randomizer.cs" />
+    <Compile Include="Randomize\IRandomizer.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -165,12 +172,8 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="appsettings2.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="appsettings.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    <None Include="Configuration\appsettings.json" />
+    <None Include="Configuration\appsettings2.json" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
