@@ -47,17 +47,20 @@ namespace Randomize
 
         private void RandomizeNumber(object sender, RoutedEventArgs e)
         {
-
+            NumberTxt.Text = string.Empty;
+            NumberTxt.Text += _integerRandomizer.GetRandomEntity();
         }
 
         private void RandomizeDice(object sender, RoutedEventArgs e)
         {
-
+            DiceTxt.Text = string.Empty;
+            NumberTxt.Text += _diceRandomiser.GetRandomEntity();
         }
 
         private void RandomizeEmail(object sender, RoutedEventArgs e)
         {
-
+            EmailTxt.Text = string.Empty;
+            DiceTxt.Text += _emailRandomizer.GetRandomEntity();
         }
     }
 }
