@@ -11,7 +11,7 @@ namespace Randomize
     public partial class MainWindow : Window
     {
         private IRandomizer _deviceIdRandomizer = new DeviceIDRandomizer();
-        private IRandomizer _diceRandomiser = new DiceRandomizer();
+        private IRandomizer _diceRandomizer = new DiceRandomizer();
         private IRandomizer _emailRandomizer = new EmailRandomizer();
         private IRandomizer _integerRandomizer = new IntegerRandomizer();
         private IRandomizer _stringRandomizer = new StringRandomizer();
@@ -21,42 +21,25 @@ namespace Randomize
             InitializeComponent();
         }
 
-        #region Randomizer Method
+        private void RandomizeGeneral(IRandomizer randomizer, TextBox textBox)
+        {
+            textBox.Text = string.Empty;
+            textBox.Text += randomizer.GetRandomEntity();
+        }
 
-        #endregion Randomizer Method
+        private void ClearGeneral(TextBox textBox)
+            => textBox.Text = string.Empty;
+
+        #region Randomization Methods
+
         private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            DeviceIDTxt.Text = string.Empty;
-            string DeviceID = _deviceIdRandomizer.GetRandomEntity();
-            DeviceIDTxt.Text += DeviceID;
-        }
-        private void Clear1(object sender, RoutedEventArgs e)
-        {
-            DeviceIDTxt.Text = DeviceIDTxt.Text = string.Empty; ;
-        }
-
-        private void RandomizeString(object sender, RoutedEventArgs e)
-        {
-            StringTxt.Text = string.Empty;
-            StringTxt.Text += _stringRandomizer.GetRandomEntity(); 
-        }
-
-        private void StringClear(object sender, RoutedEventArgs e)
-        {
-            StringTxt.Text = string.Empty;
-        }
+            => RandomizeGeneral(_deviceIdRandomizer, DeviceIDTxt);
 
         private void RandomizeNumber(object sender, RoutedEventArgs e)
-        {
-            NumberTxt.Text = string.Empty;
-            NumberTxt.Text += _integerRandomizer.GetRandomEntity();
-        }
+            => RandomizeGeneral(_integerRandomizer, NumberTxt);
 
         private void RandomizeDice(object sender, RoutedEventArgs e)
-        {
-            DiceTxt.Text = string.Empty;
-            DiceTxt.Text += _diceRandomiser.GetRandomEntity();
-        }
+            => RandomizeGeneral(_diceRandomizer, DiceTxt);
 
         private void RandomizeEmail(object sender, RoutedEventArgs e)
         {
@@ -67,10 +50,15 @@ namespace Randomize
         private void RandomizeTel(object sender, RoutedEventArgs e)
             => RandomizeGeneral(_integerRandomizer, Teltxt);
 
-        private void RandomizeGeneral(IRandomizer randomizer, TextBox textBox)
-        {
-            textBox.Text = string.Empty;
-            textBox.Text += randomizer.GetRandomEntity();
-        }
+        private void RandomizeString(object sender, RoutedEventArgs e)
+            => RandomizeGeneral(_stringRandomizer, StringTxt);
+
+        #endregion Randomization Methods
+
+        private void Clear1(object sender, RoutedEventArgs e)
+            => ClearGeneral(DeviceIDTxt);
+
+        private void StringClear(object sender, RoutedEventArgs e)
+            => ClearGeneral(StringTxt);
     }
 }
