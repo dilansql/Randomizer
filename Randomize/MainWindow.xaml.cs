@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using System.Windows.Controls;
 using Randomizers;
 
 
@@ -54,13 +55,22 @@ namespace Randomize
         private void RandomizeDice(object sender, RoutedEventArgs e)
         {
             DiceTxt.Text = string.Empty;
-            NumberTxt.Text += _diceRandomiser.GetRandomEntity();
+            DiceTxt.Text += _diceRandomiser.GetRandomEntity();
         }
 
         private void RandomizeEmail(object sender, RoutedEventArgs e)
         {
             EmailTxt.Text = string.Empty;
-            DiceTxt.Text += _emailRandomizer.GetRandomEntity();
+            EmailTxt.Text += _emailRandomizer.GetRandomEntity();
+        }
+
+        private void RandomizeTel(object sender, RoutedEventArgs e)
+            => RandomizeGeneral(_integerRandomizer, Teltxt);
+
+        private void RandomizeGeneral(IRandomizer randomizer, TextBox textBox)
+        {
+            textBox.Text = string.Empty;
+            textBox.Text += randomizer.GetRandomEntity();
         }
     }
 }

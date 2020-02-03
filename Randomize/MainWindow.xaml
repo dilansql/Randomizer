@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:Randomize"
         mc:Ignorable="d"
         Title="DeviceID Randomizer" Height="346" Width="682" MinHeight="105" MinWidth="475">
-    <Grid Background="#FF212121">
+
+    <Grid Background="#FFFFFF">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20" />
             <ColumnDefinition Width="Auto" />
@@ -37,18 +38,19 @@
         <Button Grid.Row="7" x:Name="NumberButton" Content="Randomize Number" Margin="0,76,5,164" Click="RandomizeNumber" Background="#FF212121" Foreground="White" FontSize="10" Grid.ColumnSpan="7" HorizontalAlignment="Right" Width="112"/>
         <Button Grid.Row="7" x:Name="DiceButton" Content="Randomize Dice Roll" Margin="0,119,5,121" Click="RandomizeDice" Background="#FF212121" Foreground="White" FontSize="10" Grid.ColumnSpan="7" HorizontalAlignment="Right" Width="112"/>
         <Button Grid.Row="7" x:Name="EmailButton" Content="Randomize Email" Margin="0,162,5,78" Click="RandomizeEmail" Background="#FF212121" Foreground="White" FontSize="10" Grid.ColumnSpan="7" HorizontalAlignment="Right" Width="112"/>
-        <Button Grid.Row="7" x:Name="TelButton" Content="Randomize Tel. Number" Margin="15,205,5,35" Click="Button_Click" Background="#FF212121" Foreground="White" FontSize="10" Grid.ColumnSpan="7" HorizontalAlignment="Center" Width="112"/>
+        <Button Grid.Row="7" x:Name="TelButton" Content="Randomize Tel. Number" Margin="15,205,5,35" Click="RandomizeTel" Background="#FF212121" Foreground="White" FontSize="10" Grid.ColumnSpan="7" HorizontalAlignment="Center" Width="112"/>
         <Button Grid.Column="9" x:Name="Clear" Content="Clear"  Click="Clear1" Margin="0,9,447,250" Background="#FF212121" Foreground="White" FontSize="10" Grid.RowSpan="8" />
         <Button Grid.Column="9" x:Name="ClearString" Content="Clear"  Click="StringClear" Margin="0,33,447,206" Background="#FF212121" Foreground="White" FontSize="10" Grid.Row="7" />
         <Button Grid.Column="9" x:Name="ClearNumber" Content="Clear"  Click="Clear1" Margin="0,75,447,164" Background="#FF212121" Foreground="White" FontSize="10" Grid.Row="7" />
         <Button Grid.Column="9" x:Name="ClearDice" Content="Clear"  Click="Clear1" Margin="0,119,447,120" Background="#FF212121" Foreground="White" FontSize="10" Grid.Row="7" />
         <Button Grid.Column="9" x:Name="ClearEmail" Content="Clear"  Click="Clear1" Margin="0,161,447,78" Background="#FF212121" Foreground="White" FontSize="10" Grid.Row="7" />
         <Button Grid.Column="9" x:Name="ClearTel" Content="Clear"  Click="Clear1" Margin="0,205,447,34" Background="#FF212121" Foreground="White" FontSize="10" Grid.Row="7" />
-        <TextBox x:Name="DeviceIDTxt" Margin="81,9,0,250" Background="#FF323131" Foreground="White" Grid.Column="9" Grid.RowSpan="8"  />
+        <TextBox x:Name="DeviceIDTxt" Margin="81,9,0,250" Background="#89CCA9" Foreground="White" Grid.Column="9" Grid.RowSpan="8"  />
         <TextBox x:Name="StringTxt" Margin="81,33,0,206" Background="#FF323131" Foreground="White" Grid.Column="9" Grid.Row="7"  />
         <TextBox x:Name="NumberTxt" Margin="81,77,0,162" Background="#FF323131" Foreground="White" Grid.Column="9" Grid.Row="7"  />
         <TextBox x:Name="DiceTxt" Margin="81,121,0,120" Background="#FF323131" Foreground="White" Grid.Column="9" Grid.Row="7"  />
         <TextBox x:Name="EmailTxt" Margin="81,163,0,78" Background="#FF323131" Foreground="White" Grid.Column="9" Grid.Row="7"  />
-        <TextBox x:Name="Txt_Copy4" Margin="81,205,0,34" Background="#FF323131" Foreground="White" Grid.Column="9" Grid.Row="7"  />
+        <TextBox x:Name="Teltxt" Margin="81,205,0,34" Background="#FF323131" Foreground="White" Grid.Column="9" Grid.Row="7"  />
     </Grid>
 </Window>
+    
