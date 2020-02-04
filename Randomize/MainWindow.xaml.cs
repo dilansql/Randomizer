@@ -30,6 +30,7 @@ namespace Randomize
         private void ClearGeneral(TextBox textBox)
             => textBox.Text = string.Empty;
 
+
         #region Randomization Methods
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -42,10 +43,7 @@ namespace Randomize
             => RandomizeGeneral(_diceRandomizer, DiceTxt);
 
         private void RandomizeEmail(object sender, RoutedEventArgs e)
-        {
-            EmailTxt.Text = string.Empty;
-            EmailTxt.Text += _emailRandomizer.GetRandomEntity();
-        }
+            => RandomizeGeneral(_emailRandomizer, EmailTxt);
 
         private void RandomizeTel(object sender, RoutedEventArgs e)
             => RandomizeGeneral(_integerRandomizer, Teltxt);
@@ -55,10 +53,27 @@ namespace Randomize
 
         #endregion Randomization Methods
 
+
+        #region Clear Methods
+
         private void Clear1(object sender, RoutedEventArgs e)
             => ClearGeneral(DeviceIDTxt);
 
         private void StringClear(object sender, RoutedEventArgs e)
             => ClearGeneral(StringTxt);
+
+        private void NumberClear(object sender, RoutedEventArgs e)
+            => ClearGeneral(NumberTxt);
+
+        private void DiceClear(object sender, RoutedEventArgs e)
+            => ClearGeneral(DiceTxt);
+
+        private void EmailClear(object sender, RoutedEventArgs e)
+            => ClearGeneral(EmailTxt);
+
+        private void TelClear(object sender, RoutedEventArgs e)
+            => ClearGeneral(Teltxt);
+
+        #endregion Clear Methods
     }
 }
