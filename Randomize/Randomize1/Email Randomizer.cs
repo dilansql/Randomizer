@@ -9,7 +9,7 @@ namespace Randomizers
         public string GetRandomEntity()
         {
             var stringRandomizer = new StringRandomizer();
-            return $"{ (stringRandomizer.GetRandomEntity()).Substring(40).ToLower()}@{(stringRandomizer.GetRandomEntity()).Substring(40).ToLower()}.com";
+            return $"{ (stringRandomizer.GetRandomEntity()).Substring(1,10).ToLower()}@{(stringRandomizer.GetRandomEntity()).Substring(15,20).ToLower()}.com";
         }
     }
 }
