@@ -5,51 +5,54 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Randomize"
         mc:Ignorable="d"
-        Title="DeviceID Randomizer" Height="340" Width="682" MinHeight="105" MinWidth="475">
+        Title="Gilmond Randomization Helper" Height="205.334" Width="740" MaxWidth="740" >
 
-    <Grid Background="#FFFFFF">
+    <Grid Background="#FFFFFF" >
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="20" />
-            <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="125" />
+            <ColumnDefinition Width="40" />
+            <ColumnDefinition Width="75" />
+            <ColumnDefinition Width="40" />
+            <ColumnDefinition Width="450" />
+            <ColumnDefinition Width="5" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="20" />
+            <RowDefinition Height="5" />
             <RowDefinition Height="Auto" />
+            <RowDefinition Height="5" />
             <RowDefinition Height="Auto" />
+            <RowDefinition Height="5" />
             <RowDefinition Height="Auto" />
+            <RowDefinition Height="5" />
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="5"/>
             <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
+            <RowDefinition Height="5" />
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="0"/>
         </Grid.RowDefinitions>
-        <Button Grid.Row="0" x:Name="Button" Content="Randomize DeviceID" Margin="0,10,5,250" Click="Button_Click" Background="#FF89CCA9" Foreground="White" Grid.RowSpan="8" Grid.ColumnSpan="7" HorizontalAlignment="Right" Width="112" FontFamily="Calibri Light" FontWeight="Bold" FontSize="13" BorderBrush="#FF89CCA9"/>
-        <Button Grid.Row="7" x:Name="StringButton" Content="Randomize String" Margin="0,33,5,207" Click="RandomizeString" Background="White" Foreground="#FF89CCA9" Grid.ColumnSpan="7" HorizontalAlignment="Right" Width="112" FontFamily="Calibri Light" FontWeight="Bold" FontSize="13" BorderBrush="#FF89CCA9"/>
-        <Button Grid.Row="7" x:Name="NumberButton" Content="Randomize Number" Margin="0,76,5,164" Click="RandomizeNumber" Background="#FF212121" Foreground="White" FontSize="10" Grid.ColumnSpan="7" HorizontalAlignment="Right" Width="112"/>
-        <Button Grid.Row="7" x:Name="DiceButton" Content="Randomize Dice Roll" Margin="0,119,5,121" Click="RandomizeDice" Background="#FF212121" Foreground="White" FontSize="10" Grid.ColumnSpan="7" HorizontalAlignment="Right" Width="112"/>
-        <Button Grid.Row="7" x:Name="EmailButton" Content="Randomize Email" Margin="0,162,5,78" Click="RandomizeEmail" Background="#FF212121" Foreground="White" FontSize="10" Grid.ColumnSpan="7" HorizontalAlignment="Right" Width="112"/>
-        <Button Grid.Row="7" x:Name="TelButton" Content="Randomize Tel. Number" Margin="15,205,5,35" Click="RandomizeTel" Background="#FF212121" Foreground="White" FontSize="10" Grid.ColumnSpan="7" HorizontalAlignment="Center" Width="112"/>
-        <Button Grid.Column="9" x:Name="Clear" Content="Clear"  Click="Clear1" Margin="0,9,447,250" Background="#FF212121" Foreground="White" FontSize="10" Grid.RowSpan="8" />
-        <Button Grid.Column="9" x:Name="ClearString" Content="Clear"  Click="StringClear" Margin="0,33,447,206" Background="#FF212121" Foreground="White" FontSize="10" Grid.Row="7" />
-        <Button Grid.Column="9" x:Name="ClearNumber" Content="Clear"  Click="NumberClear" Margin="0,75,447,164" Background="#FF212121" Foreground="White" FontSize="10" Grid.Row="7" />
-        <Button Grid.Column="9" x:Name="ClearDice" Content="Clear"  Click="DiceClear" Margin="0,119,447,120" Background="#FF212121" Foreground="White" FontSize="10" Grid.Row="7" />
-        <Button Grid.Column="9" x:Name="ClearEmail" Content="Clear"  Click="EmailClear" Margin="0,161,447,78" Background="#FF212121" Foreground="White" FontSize="10" Grid.Row="7" />
-        <Button Grid.Column="9" x:Name="ClearTel" Content="Clear"  Click="TelClear" Margin="0,205,447,34" Background="#FF212121" Foreground="White" FontSize="10" Grid.Row="7" />
-        <TextBox x:Name="DeviceIDTxt" Margin="81,9,0,250" Background="#89CCA9" Foreground="White" Grid.Column="8" Grid.Row="7"  />
-        <TextBox x:Name="StringTxt" Margin="81,33,0,206" Background="#FF323131" Foreground="White" Grid.Column="9" Grid.Row="7"  />
-        <TextBox x:Name="NumberTxt" Margin="81,77,0,162" Background="#FF323131" Foreground="White" Grid.Column="9" Grid.Row="7"  />
-        <TextBox x:Name="DiceTxt" Margin="81,121,0,120" Background="#FF323131" Foreground="White" Grid.Column="9" Grid.Row="7"  />
-        <TextBox x:Name="EmailTxt" Margin="81,163,0,78" Background="#FF323131" Foreground="White" Grid.Column="9" Grid.Row="7"  />
-        <TextBox x:Name="Teltxt" Margin="81,205,0,34" Background="#FF323131" Foreground="White" Grid.Column="9" Grid.Row="7"  />
+
+        <Button Grid.Column="1" Grid.Row="1" x:Name="Button" Content="Randomize DeviceID" Click="Button_Click" Background="#FF89CCA9" Foreground="White"  HorizontalAlignment="Right" Width="125" FontFamily="FilsonSoftW03-Regular"  FontSize="10" BorderBrush="#FF89CCA9" FontStretch="ExtraCondensed" TextOptions.TextHintingMode="Fixed"/>
+        <Button Grid.Column="1" Grid.Row="3" x:Name="StringButton" Content="Randomize String" Click="RandomizeString" Background="#FF89CCA9" Foreground="White"  HorizontalAlignment="Right" Width="125" FontFamily="FilsonSoftW03-Regular"  FontSize="10" BorderBrush="#FF89CCA9" FontStretch="ExtraCondensed" TextOptions.TextHintingMode="Fixed" Margin="0,0,0,18" Grid.RowSpan="2"/>
+        <Button Grid.Column="1" Grid.Row="5" x:Name="NumberButton" Content="Randomize Number" Click="RandomizeNumber" Background="#FF89CCA9" Foreground="White"  HorizontalAlignment="Right" Width="125" FontFamily="FilsonSoftW03-Regular"  FontSize="10" BorderBrush="#FF89CCA9" FontStretch="ExtraCondensed" TextOptions.TextHintingMode="Fixed"/>
+        <Button Grid.Column="1" Grid.Row="7" x:Name="DiceButton" Content="Randomize Dice Roll" Click="RandomizeDice" Background="#FF89CCA9" Foreground="White"  HorizontalAlignment="Right" Width="125" FontFamily="FilsonSoftW03-Regular"  FontSize="10" BorderBrush="#FF89CCA9" FontStretch="ExtraCondensed" TextOptions.TextHintingMode="Fixed"/>
+        <Button Grid.Column="1" Grid.Row="9" x:Name="EmailButton" Content="Randomize Email" Click="RandomizeEmail" Background="#FF89CCA9" Foreground="White"  HorizontalAlignment="Right" Width="125" FontFamily="FilsonSoftW03-Regular"  FontSize="10" BorderBrush="#FF89CCA9" FontStretch="ExtraCondensed" TextOptions.TextHintingMode="Fixed"/>
+        <Button Grid.Column="1" Grid.Row="11" x:Name="TelButton" Content="Randomize Tel. Number" Click="RandomizeTel" Background="#FF89CCA9" Foreground="White"  HorizontalAlignment="Center" Width="125" FontFamily="FilsonSoftW03-Regular" FontSize="10" BorderBrush="#FF89CCA9" FontStretch="ExtraCondensed" TextOptions.TextHintingMode="Fixed"/>
+
+        <Button Grid.Column="3" Grid.Row="1" x:Name="Clear" Content="Clear Device"  Click="Clear1" Background="#6c757d" Foreground="White" FontFamily="FilsonSoftW03-Regular" FontSize="10"/>
+        <Button Grid.Column="3" Grid.Row="3" x:Name="ClearString" Content="Clear String"  Click="StringClear" Background="#6c757d" Foreground="White" FontFamily="FilsonSoftW03-Regular" FontSize="10"/>
+        <Button Grid.Column="3" Grid.Row="5" x:Name="ClearNumber" Content="Clear Number"  Click="NumberClear"  Background="#6c757d" Foreground="White" FontFamily="FilsonSoftW03-Regular" FontSize="10"/>
+        <Button Grid.Column="3" Grid.Row="7" x:Name="ClearDice" Content="Clear Dice"  Click="DiceClear"  Background="#6c757d" Foreground="White" FontFamily="FilsonSoftW03-Regular" FontSize="10"/>
+        <Button Grid.Column="3" Grid.Row="9" x:Name="ClearEmail" Content="Clear Email"  Click="EmailClear"  Background="#6c757d" Foreground="White" FontFamily="FilsonSoftW03-Regular" FontSize="10"/>
+        <Button Grid.Column="3" Grid.Row="11" x:Name="ClearTel" Content="Clear Tel"  Click="TelClear"  Background="#6c757d" Foreground="White" FontFamily="FilsonSoftW03-Regular" FontSize="10"/>
+
+        <TextBox x:Name="DeviceIDTxt" Background="#ef6586" Foreground="Black" Grid.Column="5" Grid.Row="1" FontFamily="FilsonSoftW03-Regular" FontSize="10"/>
+        <TextBox x:Name="StringTxt" Background="#ef6586" Foreground="Black" Grid.Column="5" Grid.Row="3" FontFamily="FilsonSoftW03-Regular" FontSize="10" />
+        <TextBox x:Name="NumberTxt" Background="#ef6586" Foreground="Black" Grid.Column="5" Grid.Row="5" FontFamily="FilsonSoftW03-Regular" FontSize="10" />
+        <TextBox x:Name="DiceTxt"  Background="#ef6586" Foreground="Black" Grid.Column="5" Grid.Row="7" FontFamily="FilsonSoftW03-Regular" FontSize="10" />
+        <TextBox x:Name="EmailTxt" Background="#ef6586" Foreground="Black" Grid.Column="5" Grid.Row="9" FontFamily="FilsonSoftW03-Regular" FontSize="10" />
+        <TextBox x:Name="Teltxt"  Background="#ef6586" Foreground="Black" Grid.Column="5" Grid.Row="11" FontFamily="FilsonSoftW03-Regular" FontSize="10" />
 
     </Grid>
 </Window>
