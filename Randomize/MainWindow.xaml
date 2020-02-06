@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Randomize"
         mc:Ignorable="d"
-        Title="Gilmond Randomization Helper" Height="205.334" Width="740" MaxWidth="740" >
+        Title="Gilmond Randomization Helper" Height="205.334" Width="740" MaxWidth="740" 
+        WindowStartupLocation="CenterScreen">
 
     <Grid Background="#FFFFFF" >
         <Grid.ColumnDefinitions>

@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System.Threading;
+using System.Windows;
 using System.Windows.Controls;
 using Randomizers;
 
@@ -18,6 +19,9 @@ namespace Randomize
 
         public MainWindow()
         {
+            SplashScreen splash = new SplashScreen("flower_small.ico");
+            splash.Show(true);
+            Thread.Sleep(1500);
             InitializeComponent();
         }
 
@@ -29,7 +33,6 @@ namespace Randomize
 
         private void ClearGeneral(TextBox textBox)
             => textBox.Text = string.Empty;
-
 
         #region Randomization Methods
 
