@@ -3,7 +3,6 @@ using System.Windows;
 using System.Windows.Controls;
 using Randomizers;
 
-
 namespace Randomize
 {
     /// <summary>
