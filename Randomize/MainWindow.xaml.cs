@@ -11,17 +11,19 @@ namespace Randomize
     /// </summary>
     public partial class MainWindow : Window
     {
+        #region Interface Initializations
         private IRandomizer _deviceIdRandomizer = new DeviceIDRandomizer();
         private IRandomizer _diceRandomizer = new DiceRandomizer();
         private IRandomizer _emailRandomizer = new EmailRandomizer();
         private IRandomizer _integerRandomizer = new IntegerRandomizer();
         private IRandomizer _stringRandomizer = new StringRandomizer();
+        #endregion Interface Initializations
 
         public MainWindow()
         {
-            SplashScreen splash = new SplashScreen("flower_small.ico");
+            /*SplashScreen splash = new SplashScreen("flower_small.ico");
             splash.Show(true);
-            Thread.Sleep(1500);
+            Thread.Sleep(1500);*/
             InitializeComponent();
         }
 
