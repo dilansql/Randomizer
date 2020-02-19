@@ -16,13 +16,14 @@ namespace Randomize
         private IRandomizer _emailRandomizer = new EmailRandomizer();
         private IRandomizer _integerRandomizer = new IntegerRandomizer();
         private IRandomizer _stringRandomizer = new StringRandomizer();
+        private INumberRandomizer _numberRandomizer = new IntegerRandomizer();
         #endregion Interface Initializations
 
         public MainWindow()
         {
-            /*SplashScreen splash = new SplashScreen("flower_small.ico");
+            SplashScreen splash = new SplashScreen("flower_small.ico");
             splash.Show(true);
-            Thread.Sleep(1500);*/
+            Thread.Sleep(1500);
             InitializeComponent();
         }
 
@@ -30,6 +31,12 @@ namespace Randomize
         {
             textBox.Text = string.Empty;
             textBox.Text += randomizer.GetRandomEntity();
+        }
+
+        private void RandomizeGeneral(INumberRandomizer randomizer, TextBox textBox, string value)
+        {
+            textBox.Text = string.Empty;
+            textBox.Text += randomizer.GetRandomEntity(int.Parse(value));
         }
 
         private void ClearGeneral(TextBox textBox)
@@ -41,7 +48,7 @@ namespace Randomize
             => RandomizeGeneral(_deviceIdRandomizer, DeviceIDTxt);
 
         private void RandomizeNumber(object sender, RoutedEventArgs e)
-            => RandomizeGeneral(_integerRandomizer, NumberTxt);
+            => RandomizeGeneral(_numberRandomizer, NumberTxt, NumberValue.Text);
 
         private void RandomizeDice(object sender, RoutedEventArgs e)
             => RandomizeGeneral(_diceRandomizer, DiceTxt);

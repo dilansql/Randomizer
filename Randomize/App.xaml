@@ -6,5 +6,58 @@
              >
     <Application.Resources>
 
+        <Style x:Key="RoundEventButton" TargetType="{x:Type Button}">
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="2"/>
+            <Setter Property="Background" Value="AliceBlue"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid x:Name="grid">
+                            <Border x:Name="border" CornerRadius="10" BorderBrush="#FF89CCA9" BorderThickness="1" Background="#FF89CCA9" />
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="Test" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate x:Name="Testo" TargetType="{x:Type Button}">
+                        <Grid x:Name="grid">
+                            <Button Background="#6c757d" Foreground="White" Grid.Column="5" Grid.Row="13" Content="Testo">
+                                <Button.Resources>
+                                    <Style TargetType="Border">
+                                        <Setter Property="CornerRadius" Value="10"/>
+                                    </Style>
+                                </Button.Resources>
+                            </Button>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        
+        
+        <Style x:Key="RoundClearButton" TargetType="{x:Type Button}">
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid x:Name="grid">
+
+                            <Border x:Name="border" CornerRadius="8" BorderBrush="Black" BorderThickness="1">
+                            </Border>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
     </Application.Resources>
 </Application>

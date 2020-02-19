@@ -13,5 +13,7 @@ namespace Randomize
     /// </summary>
     public partial class App : Application
     {
+        
+
     }
 }
