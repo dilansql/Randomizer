@@ -1,7 +1,9 @@
 ﻿using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
+using System.Text.RegularExpressions;
 using Randomizers;
+using System.Windows.Input;
 
 namespace Randomize
 {
@@ -19,12 +21,19 @@ namespace Randomize
         private INumberRandomizer _numberRandomizer = new IntegerRandomizer();
         #endregion Interface Initializations
 
+        Regex Regex { get; set; } = new Regex("[^0-9]+");
+
         public MainWindow()
         {
             SplashScreen splash = new SplashScreen("flower_small.ico");
             splash.Show(true);
             Thread.Sleep(1500);
             InitializeComponent();
+        }
+
+        private void NumberValidationTextBoz(object sender, TextCompositionEventArgs e)
+        {
+            e.Handled = Regex.IsMatch(e.Text);
         }
 
         private void RandomizeGeneral(IRandomizer randomizer, TextBox textBox)
@@ -86,5 +95,10 @@ namespace Randomize
             => ClearGeneral(Teltxt);
 
         #endregion Clear Methods
+
+        private void TextBox_Pasting(object sender, DataObjectPastingEventArgs e)
+        {
+            e.Handled = Regex.IsMatch(e.Text);
+        }
     }
 }

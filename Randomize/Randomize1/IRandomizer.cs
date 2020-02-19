@@ -3,6 +3,5 @@
     public interface IRandomizer
     {
        string GetRandomEntity();
-       
     }
 }
