@@ -42,15 +42,16 @@ namespace Randomize
             textBox.Text += randomizer.GetRandomEntity();
         }
 
+        private void RandomizeGeneral(string text, TextBox textBox)
+        {
+            textBox.Text = string.Empty;
+            textBox.Text += text;
+        }
+
         private void RandomizeGeneral(IGeneralRandomizer randomizer, TextBox textBox, string value)
         {
             textBox.Text = string.Empty;
             textBox.Text += randomizer.GetRandomEntity(int.Parse(value));
-        }
-
-        private void RandomizeGeneral()
-        {
-            
         }
 
         private void ClearGeneral(TextBox textBox)
@@ -76,6 +77,9 @@ namespace Randomize
         private void RandomizeString(object sender, RoutedEventArgs e)
             => RandomizeGeneral(_stringRandomizer, StringTxt, StringValue.Text);
 
+        private void PortButton_Click(object sender, RoutedEventArgs e)
+            =>  RandomizeGeneral(PortNumber.FreeTcpPort(), Porttxt);
+
         #endregion Randomization Methods
 
 
@@ -98,6 +102,9 @@ namespace Randomize
 
         private void TelClear(object sender, RoutedEventArgs e)
             => ClearGeneral(Teltxt);
+
+        private void ClearPort_Click(object sender, RoutedEventArgs e)
+            => ClearGeneral(Porttxt);
 
         #endregion Clear Methods
         /*

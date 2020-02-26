@@ -136,6 +136,7 @@
     <Compile Include="Configuration\MyNewOptions.cs" />
     <Compile Include="Configuration\ServiceExtensions.cs" />
     <Compile Include="CustomControl1.cs" />
+    <Compile Include="PortNumber.cs" />
     <Compile Include="Randomize1\DeviceID Randomizer.cs" />
     <Compile Include="Randomize1\INumberRandomizer.cs" />
     <Compile Include="Randomize1\String Randomizer.cs" />
