@@ -16,7 +16,6 @@ namespace Randomize
         private IRandomizer _deviceIdRandomizer = new DeviceIDRandomizer();
         private IRandomizer _diceRandomizer = new DiceRandomizer();
         private IRandomizer _emailRandomizer = new EmailRandomizer();
-        private IRandomizer _integerRandomizer = new IntegerRandomizer();
         private IGeneralRandomizer _numberRandomizer = new IntegerRandomizer();
         private IGeneralRandomizer _stringRandomizer = new StringRandomizer();
         #endregion Interface Initializations
@@ -72,7 +71,18 @@ namespace Randomize
             => RandomizeGeneral(_emailRandomizer, EmailTxt);
 
         private void RandomizeTel(object sender, RoutedEventArgs e)
-            => RandomizeGeneral(_integerRandomizer, Teltxt);
+        {
+            string number = "+";
+
+            number += _numberRandomizer.GetRandomEntity(2);
+            number += " ";
+            number += _numberRandomizer.GetRandomEntity(3);
+            number += " ";
+            number += _numberRandomizer.GetRandomEntity(3);
+            number += " ";
+            number += _numberRandomizer.GetRandomEntity(4);
+            RandomizeGeneral(number, Teltxt);
+        }
 
         private void RandomizeString(object sender, RoutedEventArgs e)
             => RandomizeGeneral(_stringRandomizer, StringTxt, StringValue.Text);
@@ -107,6 +117,7 @@ namespace Randomize
             => ClearGeneral(Porttxt);
 
         #endregion Clear Methods
+
         /*
         private void TextBox_Pasting(object sender, DataObjectPastingEventArgs e)
         {
