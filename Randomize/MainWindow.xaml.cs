@@ -17,8 +17,8 @@ namespace Randomize
         private IRandomizer _diceRandomizer = new DiceRandomizer();
         private IRandomizer _emailRandomizer = new EmailRandomizer();
         private IRandomizer _integerRandomizer = new IntegerRandomizer();
-        private IRandomizer _stringRandomizer = new StringRandomizer();
-        private INumberRandomizer _numberRandomizer = new IntegerRandomizer();
+        private IGeneralRandomizer _numberRandomizer = new IntegerRandomizer();
+        private IGeneralRandomizer _stringRandomizer = new StringRandomizer();
         #endregion Interface Initializations
 
         Regex Regex { get; set; } = new Regex("[^0-9]+");
@@ -42,10 +42,15 @@ namespace Randomize
             textBox.Text += randomizer.GetRandomEntity();
         }
 
-        private void RandomizeGeneral(INumberRandomizer randomizer, TextBox textBox, string value)
+        private void RandomizeGeneral(IGeneralRandomizer randomizer, TextBox textBox, string value)
         {
             textBox.Text = string.Empty;
             textBox.Text += randomizer.GetRandomEntity(int.Parse(value));
+        }
+
+        private void RandomizeGeneral()
+        {
+            
         }
 
         private void ClearGeneral(TextBox textBox)
@@ -69,7 +74,7 @@ namespace Randomize
             => RandomizeGeneral(_integerRandomizer, Teltxt);
 
         private void RandomizeString(object sender, RoutedEventArgs e)
-            => RandomizeGeneral(_stringRandomizer, StringTxt);
+            => RandomizeGeneral(_stringRandomizer, StringTxt, StringValue.Text);
 
         #endregion Randomization Methods
 
@@ -95,10 +100,10 @@ namespace Randomize
             => ClearGeneral(Teltxt);
 
         #endregion Clear Methods
-
+        /*
         private void TextBox_Pasting(object sender, DataObjectPastingEventArgs e)
         {
             e.Handled = Regex.IsMatch(e.Text);
-        }
+        }*/
     }
 }

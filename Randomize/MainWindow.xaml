@@ -20,6 +20,8 @@
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="0" />
+            <RowDefinition Height="20" />
+            <RowDefinition Height="5" />
             <RowDefinition Height="20"/>
             <RowDefinition Height="5" />
             <RowDefinition Height="20" MinHeight="17" />
@@ -36,9 +38,7 @@
             <RowDefinition Height="5"/>
         </Grid.RowDefinitions>
 
-
-
-        <Button Style="{DynamicResource RoundEventButton}" Grid.Row="1" x:Name="Button" Click="Button_Click" Grid.ColumnSpan="2" Margin="4,1,1,5" Grid.RowSpan="2" />
+        <Button Grid.Row="1" x:Name="Button" Click="Button_Click" Grid.ColumnSpan="2" Grid.RowSpan="2" />
         <Button Grid.Column="1" Grid.Row="3" x:Name="StringButton" Content="Randomize String" Click="RandomizeString"  Foreground="White"  HorizontalAlignment="Right" Width="125" FontFamily="FilsonSoftW03-Regular"  FontSize="10" BorderBrush="#FF89CCA9" FontStretch="ExtraCondensed" TextOptions.TextHintingMode="Fixed"/>
         <Button Grid.Column="1" Grid.Row="5" x:Name="NumberButton" Content="Randomize Number" Click="RandomizeNumber" Background="#FF89CCA9" Foreground="White"  HorizontalAlignment="Right" Width="125" FontFamily="FilsonSoftW03-Regular"  FontSize="10" BorderBrush="#FF89CCA9" FontStretch="ExtraCondensed" TextOptions.TextHintingMode="Fixed"/>
         <Button Grid.Column="1" Grid.Row="7" x:Name="DiceButton" Content="Randomize Dice Roll" Click="RandomizeDice" Background="#FF89CCA9" Foreground="White"  HorizontalAlignment="Right" Width="125" FontFamily="FilsonSoftW03-Regular"  FontSize="10" BorderBrush="#FF89CCA9" FontStretch="ExtraCondensed" TextOptions.TextHintingMode="Fixed"/>
@@ -59,9 +59,8 @@
         <TextBox x:Name="EmailTxt" Background="#ef6586" Foreground="Black" Grid.Column="5" Grid.Row="9" FontFamily="FilsonSoftW03-Regular" FontSize="10" />
         <TextBox x:Name="Teltxt"  Background="#ef6586" Foreground="Black" Grid.Column="5" Grid.Row="11" FontFamily="FilsonSoftW03-Regular" FontSize="10" />
 
-        <TextBox Grid.Column="2" Grid.Row="3" TextWrapping="Wrap" Text="5" VerticalAlignment="Top" Width="40" Height="21" DataObject.Pasting="TextBox_Pasting" />
         <TextBox x:Name="NumberValue" Grid.Column="2" Grid.Row="5" TextWrapping="Wrap" Text="5" VerticalAlignment="Top" Width="40" Height="21"/>
-        <TextBox Grid.Column="2" Grid.Row="7" TextWrapping="Wrap" Text="5" VerticalAlignment="Top" Width="40" Height="21"/>
+        <TextBox x:Name="StringValue" Grid.Column="2" Grid.Row="3" TextWrapping="Wrap" Text="5" VerticalAlignment="Top" Width="40" Height="21"/>
 
     </Grid>
 </Window>

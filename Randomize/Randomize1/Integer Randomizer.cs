@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Randomizers
 {
-    class IntegerRandomizer : IRandomizer, INumberRandomizer
+    class IntegerRandomizer : IRandomizer, IGeneralRandomizer
     {
 
         public string GetRandomEntity()

@@ -1,6 +1,6 @@
 ﻿namespace Randomizers
 {
-    internal interface INumberRandomizer
+    internal interface IGeneralRandomizer
     {
         string GetRandomEntity(int p);
     }
