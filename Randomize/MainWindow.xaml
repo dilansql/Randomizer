@@ -39,7 +39,6 @@
             <RowDefinition Height="25"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Text="Gilmond Randomization Tool" Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="3" Background="White" Foreground="DarkGray" FontFamily="FilsonSoftW03-Regular" FontSize="10" TextAlignment="Center" />
         <Button Grid.Column="1" Grid.Row="3" x:Name="Button" Content="Randomize DeviceID" Click="Button_Click" Background="#FF89CCA9" Foreground="White"  Width="125" FontFamily="FilsonSoftW03-Regular"  FontSize="10" BorderBrush="#FF89CCA9" FontStretch="ExtraCondensed" TextOptions.TextHintingMode="Fixed"/>
         <Button Grid.Column="1" Grid.Row="5" x:Name="StringButton" Content="Randomize String" Click="RandomizeString" Background="#FF89CCA9" Foreground="White"  HorizontalAlignment="Right" Width="125" FontFamily="FilsonSoftW03-Regular"  FontSize="10" BorderBrush="#FF89CCA9" FontStretch="ExtraCondensed" TextOptions.TextHintingMode="Fixed"/>
         <Button Grid.Column="1" Grid.Row="7" x:Name="NumberButton" Content="Randomize Number" Click="RandomizeNumber" Background="#FF89CCA9" Foreground="White"  HorizontalAlignment="Right" Width="125" FontFamily="FilsonSoftW03-Regular"  FontSize="10" BorderBrush="#FF89CCA9" FontStretch="ExtraCondensed" TextOptions.TextHintingMode="Fixed"/>
@@ -64,7 +63,7 @@
         <TextBox x:Name="Teltxt"  Background="#ef6586" Foreground="Black" Grid.Column="5" Grid.Row="13" FontFamily="FilsonSoftW03-Regular" FontSize="10" Grid.ColumnSpan="2" />
         <TextBox x:Name="Porttxt"  Background="#ef6586" Foreground="Black" Grid.Column="5" Grid.Row="15" FontFamily="FilsonSoftW03-Regular" FontSize="10" Grid.ColumnSpan="2" />
 
-        <Image Source="flower_small.ico" Grid.Column="1" Grid.Row="1" />
+        <Image Source="flower_small.ico" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" />
 
         <TextBox x:Name="StringValue" Grid.Column="2" Grid.Row="5" TextWrapping="Wrap" Text="5" VerticalAlignment="Top" Width="40" Height="21" Margin="5,0" Background="Gray" Foreground="White" FontFamily="FilsonSoftW03-Regular" FontSize="10"/>
         <TextBox x:Name="NumberValue" Grid.Column="2" Grid.Row="7" TextWrapping="Wrap" Text="5" VerticalAlignment="Top" Width="40" Height="21" Margin="5,0" Background="Gray" Foreground="White" FontFamily="FilsonSoftW03-Regular" FontSize="10"/>
